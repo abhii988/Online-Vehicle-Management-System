@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Author: Abhishek Gupta-->
+<!--Giving location to the CSS file.-->
+<?xml-stylesheet type="text/css" href="catalog_18029801.css"?> 
+<!--Declaring root 'Shop' element and giving location to the schema document.-->
+<Shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalog_18029801.xsd">
+	<!--Declaring header element where logo, name, locaiton and Website of the shop is kept.-->
+	<header>
+        <Logo/>
+        <Name>Baluwatar Auto Dealership Pvt. Ltd.</Name>
+        <Address>Baluwatar, Kathmandu</Address>
+        <Website>www.baluwatarauto.com</Website>
+    </header>
+	<!--Declaring elements of cars available in the shop.-->
+	<Items_Available>
+		<!--Declaring child elements of the parent element 'Item'.-->
+		<Item>
+			<!--Declaring elements of each cars along with their number, brand name, logo, car type, car image, description, quantity and price.-->
+			<Item_Number>1</Item_Number>
+			<Brand_Name>Toyota</Brand_Name>
+			<Brand_Logo id="b1"/>
+			<Car_Type>Sedan</Car_Type>
+			<Car_Image id="i1"/>
+			<Description>This car has been sold by Toyota since the year of 1982 till now. It is one of the most selling model of Toyota.</Description>
+			<Quantity>1</Quantity>
+			<Price currency="Rs. ">2,800,000</Price>
+			<!--Optional data fields in the parent element 'Car_Info' are 'Engine, Battery_Capacity, Infotainment_System, Insurance, Camera' elements.-->
+			<Car_Info Type="Gas">
+				<!--Declaring elements of each cars along with their manufacturer, model, chassis no., engine, battery capacity, fuel type, infotainment system, insurance, camera, color, weight, mfg year and used for.-->
+				<Manufacturer>Toyota Motor Corp.</Manufacturer>
+				<Model>Camry</Model>
+				<Chassis_No>1HGBH41JXMN109186</Chassis_No>
+				<Engine>2.5L</Engine>
+				<Fuel_Type>Gas</Fuel_Type>
+				<Camera>Dash Cam</Camera>
+				<Color>White</Color>
+				<Weight unit="kg">1,130</Weight>
+				<Mfg_Year>2018</Mfg_Year>
+				<Used_For time="years">2</Used_For>
+			</Car_Info>
+		</Item>
+		<Item>
+			<Item_Number>2</Item_Number>
+			<Brand_Name>Mercedes-Benz</Brand_Name>
+			<Brand_Logo id="b2"/>
+			<Car_Type>Sports</Car_Type>
+			<Car_Image id="i2"/>
+			<Description>This car is an limited edition electric variant of SLS AMG series introduced by Mercedes in 2013.</Description>
+			<Quantity>1</Quantity>
+			<Price currency="Rs. ">20,500,000</Price>
+			<Car_Info Type="Electric">
+				<Manufacturer>Daimler AG</Manufacturer>
+				<Model>SLS AMG Electric Drive</Model>
+				<Chassis_No>1GNCS18Z3M0115561</Chassis_No>
+				<Battery_Capacity>60kWh</Battery_Capacity>
+				<Fuel_Type>Electric</Fuel_Type>
+				<Infotainment_System>Android Auto</Infotainment_System>
+				<Insurance>3rd Party</Insurance>
+				<Camera>Dash and Backup Camera</Camera>
+				<Color>Chrome Blue</Color>
+				<Weight unit="kg">2110</Weight>
+				<Mfg_Year>2013</Mfg_Year>
+				<Used_For time="years">5</Used_For>
+			</Car_Info>
+		</Item>
+		<Item>
+			<Item_Number>3</Item_Number>
+			<Brand_Name>Hyundai</Brand_Name>
+			<Brand_Logo id="b3"/>
+			<Car_Type>Hatchback</Car_Type>
+			<Car_Image id="i3"/>
+			<Description>This is a gas plus electric, hybrid car which is one of the best in the market.</Description>
+			<Quantity>1</Quantity>
+			<Price currency="Rs. ">4,500,000</Price>
+			<Car_Info Type="Hybrid">
+				<Manufacturer>Hyundai Motor Group</Manufacturer>
+				<Model>Ioniq</Model>
+				<Chassis_No>1HGCV1F39JA172420</Chassis_No>
+				<Engine>1.6L</Engine>
+				<Battery_Capacity>8.9kWh</Battery_Capacity>
+				<Fuel_Type>Hybrid</Fuel_Type>
+				<Infotainment_System>Multi-Info Display</Infotainment_System>
+				<Camera>Backup Camera</Camera>
+				<Color>White</Color>
+				<Weight unit="kg">1,360</Weight>
+				<Mfg_Year>2016</Mfg_Year>
+				<Used_For time="years">3</Used_For>
+			</Car_Info>
+		</Item>
+		<Item>
+			<Item_Number>4</Item_Number>
+			<Brand_Name>Audi</Brand_Name>
+			<Brand_Logo id="b4"/>
+			<Car_Type>SUV</Car_Type>
+			<Car_Image id="i4"/>
+			<Description>This is a crossover SUV that is completely electric built with Audi DNA.</Description>
+			<Quantity>1</Quantity>
+			<Price currency="Rs. ">30,000,000</Price>
+			<Car_Info Type="Electric">
+				<Manufacturer>Volkswagen Group</Manufacturer>
+				<Model>E-tron</Model>
+				<Chassis_No>1G1YZ23J9P5803427</Chassis_No>
+				<Battery_Capacity>95kWh</Battery_Capacity>
+				<Fuel_Type>Gas</Fuel_Type>
+				<Infotainment_System>Apple CarPlay</Infotainment_System>
+				<Insurance>Full</Insurance>
+				<Camera>Dash and Backup Camera</Camera>
+				<Color>Azure Blue</Color>
+				<Weight unit="kg">2,560</Weight>
+				<Mfg_Year>2019</Mfg_Year>
+				<Used_For time="years">2</Used_For>
+			</Car_Info>
+		</Item>
+		<Item>
+			<Item_Number>5</Item_Number>
+			<Brand_Name>Maruti Suzuki</Brand_Name>
+			<Brand_Logo id="b5"/>
+			<Car_Type>4x4 Off-Road</Car_Type>
+			<Car_Image id="i5"/>
+			<Description>This is a Suzuki Jimny SJ40/410 series based 4WD off-roading vehicle, one of the best off-road car.</Description>
+			<Quantity>1</Quantity>
+			<Price currency="Rs. ">1,500,000</Price>
+			<Car_Info Type="Gas">
+				<Manufacturer>Suzuki Motor Corp.</Manufacturer>
+				<Model>Gypsy</Model>
+				<Chassis_No>1HGCM82633A004352</Chassis_No>
+				<Engine>1.0L</Engine>
+				<Fuel_Type>Gas</Fuel_Type>
+				<Color>Pearl White</Color>
+				<Weight unit="kg">1,040</Weight>
+				<Mfg_Year>2002</Mfg_Year>
+				<Used_For time="years">12</Used_For>
+			</Car_Info>
+		</Item>
+	</Items_Available>
+    <footer>
+        <Telephone_No>+977-1-4418888</Telephone_No>
+        <Email>baluwatarautodealership@gmail.com</Email>
+        <FB>www.facebook.com/baluwatarautodealership</FB>
+    </footer>
+</Shop>

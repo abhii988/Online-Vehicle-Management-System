@@ -1,0 +1,310 @@
+/*Adding background color to 'Shop' element, which is the whole page.*/
+Shop{
+	background-color: rgb(64,64,64);
+}
+
+/*Selecting 'header' element and giving background image to the header and proper location in order to display it properly and designing it according to its respective size and resolution.*/
+header{
+	background-repeat: no-repeat;
+	font-family: 'Roboto Mono', sans-serif;
+    background-image: url(images/headerbg.jpeg);
+    background-size: 100%;
+    max-width: 98%;
+    height: 1030px;
+    display: block;
+    padding: 15px;
+    margin: 3px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/*Selecting 'Logo' element and giving proper location to the logo of the shop in order to display it properly and designing it according to its respective size and resolution.*/
+Logo {
+	background-repeat:no-repeat ;
+    background-image: url(images/logo.jpg);
+    display: block;
+    width: 175px;
+    height: 105px;	
+	padding: 5pt;
+	margin: auto;
+	margin-top: 1in;
+	background-size: 180px;
+}
+
+/*Adding contents to the 'Name' element and designing it.*/
+Name::before{
+	font-size: 90px;
+	content: "Hello There and Welcome to \a";
+    align-content: center;
+	white-space: pre;
+	color: RGB(153,255,255);
+}
+
+/*Desiging the 'Name' element.*/
+Name{
+    font-size: 95px;
+    text-align: center;
+    color: RGB(153,255,255);
+    display: block;
+    padding: 5pt;
+}
+
+/*Adding contents to the 'Address' element and designing it.*/
+Address::before{
+	content: "\a \a \a We are located at ";
+	white-space: pre;
+}
+
+/*Desiging the 'Address' element.*/
+Address{
+    font-size: 85px;
+    text-align: center;
+    color: RGB(255,204,153);
+    display: block;
+    padding: 5pt;
+}
+
+/*Adding contents to the 'Website' element.*/
+Website::before{
+	content: "Visit us at: ";
+	text-decoration: none;
+}
+
+/*Desiging the 'Website' element.*/
+Website{
+    font-size: 40px;
+    text-align: right;
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+/*Adding cursor hover property to the 'Website' element.*/
+Website:hover{
+	cursor:pointer
+}
+
+/*Adding contents, margins, and design to the 'Item' element.*/
+Item::before{
+    display: flex;
+	width: 4.5em;
+	font-weight: bold;
+	font-size: 200%;
+	content: "Available:";
+	margin: -.75em 0px .25em -.25em;
+	padding: .1em .25em;
+	background-color: #cdf;
+}
+
+/*Adding flex and design to the 'Item' element.*/
+Item{
+    display: block;
+	margin: 2em 1em;
+	border: 4px solid #cdf;
+	padding: 0px 30px;
+	background-color: #e8e0c3;
+    font-size: 30px;
+	transition: 0.7s;
+	flex: 100%;
+}
+
+/*Adding hover property to the 'Item' element.*/
+Item:hover {
+  box-shadow: 0 18px 16px 10px rgba(10,110,55,2);
+}
+
+/*Displaying 'Items_Available' element in flex.*/
+Items_Available {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Selecting 'Brand_Logo' element with their respective IDS and giving proper location to the logos of the cars in order to display them properly and designing each images according to their respective sizes and resolutions.*/
+#b1{
+	background-repeat: no-repeat;
+    background-image: url(images/toyota.png);
+    display: block;
+    width: 150px;
+    height: 130px;
+	float:right;
+	padding: 5pt;
+	background-size: 183px;
+	margin-top: -99px;
+}
+#b2{
+	background-repeat: no-repeat;
+    background-image: url(images/mercedes.png);
+    display: block;
+    width: 135px;
+    height: 135px;
+	float:right;
+	padding: 5pt;
+	background-size: 140px;
+	margin-top: -90px;
+}
+#b3{
+	background-repeat: no-repeat;
+    background-image: url(images/hyundai.png);
+    display: block;
+    width: 190px;
+    height: 100px;
+	float:right;
+	padding: 5pt;
+	background-size: 210px;
+	margin-top: -80px;
+}
+#b4{
+	background-repeat: no-repeat;
+    background-image: url(images/audi.png);
+    display: block;
+    width: 160px;
+    height: 100px;
+	float:right;
+	padding: 5pt;
+	background-size: 180px;
+	margin-top: -60px;
+}
+#b5{
+	background-repeat: no-repeat;
+    background-image: url(images/suzuki.png);
+    display: block;
+    width: 150px;
+    height: 100px;
+	float:right;
+	padding: 5pt;
+	background-size: 160px;
+	margin-top: -70px;
+}
+
+/*Selecting 'Car_Images' element with their respective IDS and giving proper location to the images of the cars in order to display them properly and designing each images according to their respective sizes and resolutions.*/
+#i1{
+	background-repeat: no-repeat;
+    background-image: url(images/camry.jpg);
+    display: block;
+    width: 1410px;
+    height: 1000px;
+	padding: 34pt;
+	margin-left: 140px;
+	background-size: 1500px;
+	margin-bottom: -30px;
+	margin-top: 30px;
+}
+#i2{
+	background-repeat: no-repeat;
+    background-image: url(images/sls.jpg);
+    display: block;
+    width: 1410px;
+    height: 900px;
+	padding: 35pt;
+	margin-left: 138px;
+	background-size: 1500px;
+	margin-bottom: 55px;
+	margin-top: 30px;
+}
+#i3{
+	background-repeat: no-repeat;
+    background-image: url(images/ioniq.jpg);
+    display: block;
+    width: 1410px;
+    height: 1000px;
+	padding: 35pt;
+	margin-left: 138px;
+	background-size: 1500px;
+	margin-bottom: -100px;
+	margin-top: 30px;
+}
+#i4{
+	background-repeat: no-repeat;
+    background-image: url(images/etron.jpg);
+    display: block;
+    width: 1410px;
+    height: 1000px;
+	padding: 35pt;
+	margin-left: 138px;
+	background-size: 1500px;
+	margin-bottom: -200px;
+	margin-top: 30px;
+}
+#i5{
+	background-repeat: no-repeat;
+    background-image: url(images/gypsy.jpg);
+    display: block;
+    width: 1410px;
+    height: 1000px;
+	padding: 35pt;
+	margin-left: 138px;
+	background-size: 1500px;
+	margin-bottom: -200px;
+	margin-top: 30px;
+}
+
+/*Desgning the elements 'Item_Number, Brand_Name and Car_Type'*/
+Item_Number{
+	font-weight: bold;
+    font-size: 100%;
+    display: block;
+}
+Brand_Name, Car_Type{
+	font-weight: bold;
+    font-size: 140%;
+    display: block;
+	color: #630a20;
+}
+
+/*Adding marging to elements 'Quantity and Price'*/
+Quantity, Price{
+	margin-top: 10px;
+    display: block;
+}
+
+/*Adding contents in each elements of the items.*/
+Brand_Name::before{content: "Brand: ";}
+Item_Number::before{content: "Item Number: ";}
+Car_Type::before{content: "Car Type: ";}
+Description::before{content: "Info: "; white-space: pre;}
+Quantity::before{content: "Available Quantity: ";}
+Manufacturer::before {content:"Manufacturer: ";}
+Model::before {content:"Model: ";}
+Chassis_No::before {content:"Chassis Number: ";}
+Engine::before {content:"Engine: ";}
+Battery_Capacity::before {content:"Battery Capacity: ";}
+Fuel_Type::before {content:"Fuel Type: ";}
+Infotainment_System::before {content:"Infotainment System: ";}
+Insurance::before {content:"Insurance: ";}
+Camera::before {content:"Camera: ";}
+Color::before {content:"Color: ";}
+Weight::before {content:"Weight: ";}
+Mfg_Year::before {content:"Manufactured Year: ";}
+Used_For::before {content:"Used For: ";}
+
+/*Adding the attribute as the contents of the elements.*/
+Price::before{content: "Price: " attr(currency);}
+Weight::after {content:" " attr(unit);}
+Used_For::after {content:" " attr(time);}
+
+/*Displaying and desiging the sub-elements of 'Car_Info' in list format.*/
+Manufacturer, Model, Chassis_No, Engine, Battery_Capacity, Fuel_Type, Infotainment_System, Insurance, Camera, Color, Weight, Mfg_Year, Used_For{
+	display: list-item; 
+	font-family: Times New Roman, Times, Serif; 
+	font-size: 15pt; 
+	list-style: disc; 
+	margin-left: 50px;	
+}
+
+/*Adding margins for 'Manufacturer and Used_For' elements.*/
+Manufacturer{margin-top: 20px;}
+Used_For{margin-bottom: 20px;}
+
+/*Desigin the footer.*/
+footer{
+	border: 2%;
+	border-radius: 5px;
+	display: block;
+	background-color: azure;
+    color: red;
+	font-size: 36px;
+}
+
+/*Adding contents in the footer and its elements.*/
+footer::before{content: "Feel free to contact us at:";}
+Email::before {content: "\a E-mail address: "; white-space: pre;}
+FB::before {content:"\a Facebook: "; white-space: pre;}

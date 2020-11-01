@@ -1,0 +1,179 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!--Creating schema for the 'Shop' element which is of complex type and is giving reference to its child elements, which is in sequencial order.-->
+	<xs:element name="Shop">
+		<xs:complexType>
+			<xs:sequence>
+				<!--Referencing the elements present in the parent element.-->
+				<xs:element ref="header"/>
+				<xs:element ref="Items_Available"/>
+				<xs:element ref="footer"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--Creating schema for the header element which is of complex type and is giving reference to its child elements which is in sequencial order.-->
+	<xs:element name="header">
+		<xs:complexType>
+			<xs:sequence>
+				<!--Referencing the elements present in the parent element.-->
+				<xs:element ref="Logo"/>
+				<xs:element ref="Name"/>
+				<xs:element ref="Address"/>
+				<xs:element ref="Website"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--Creating schema for the child elements of 'header' element.-->
+	<xs:element name="Logo" type="xs:string"/>
+	<xs:element name="Name" type="xs:string"/>
+	<xs:element name="Address" type="xs:string"/>
+	<xs:element name="Website" type="xs:string"/>
+	<!--Creating schema for the 'Items_Available' element which is of complex type and is giving reference to its child elements which is in sequencial order.-->
+	<xs:element name="Items_Available">
+		<xs:complexType>
+			<xs:sequence>
+				<!--Here, 'minOccurs="0"' and 'maxOccurs="unbounded"' means that the data is repeated more that once.-->
+				<xs:element ref="Item" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--Creating schema for the 'Item' element which is of complex type and is giving reference to its child elements which is in sequencial order.-->
+	<xs:element name="Item">
+		<xs:complexType>
+			<xs:sequence>
+				<!--Referencing the elements present in the parent element.-->
+				<xs:element ref="Item_Number"/>
+				<xs:element ref="Brand_Name"/>
+				<xs:element ref="Brand_Logo"/>
+				<xs:element ref="Car_Type"/>
+				<xs:element ref="Car_Image"/>
+				<xs:element ref="Description"/>
+				<xs:element ref="Quantity"/>
+				<xs:element ref="Price"/>
+				<xs:element ref="Car_Info"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--Creating schema for the child elements of 'Item' element.-->
+	<xs:element name="Item_Number" type="xs:integer"/>
+	<xs:element name="Brand_Name" type="xs:string"/>
+	<xs:element name="Brand_Logo">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<!--Here, 'Brand_Logo' element has 'id' as an attribute and is of string type.-->
+					<xs:attribute name="id" type="xs:string"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Car_Type" type="xs:string"/>
+	<xs:element name="Car_Image">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<!--Here, 'Car_Image' element has 'id' as an attribute and is of string type.-->
+					<xs:attribute name="id" type="xs:string"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Description" type="xs:string"/>
+	<xs:element name="Quantity">
+		<xs:simpleType>
+            <!--Adding restriction to 'Quantity' element.-->
+            <xs:restriction base="xs:integer">
+            	<!--Defining a pattern for restriction using regex.-->
+                <xs:pattern value="[0-9]{1,2}" /> 
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+	<xs:element name="Price">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<!--Here, 'Price' element has 'currency' as an attribute and is of string type.-->
+					<xs:attribute name="currency" type="xs:string"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!--Creating schema for the 'Car_Info' element which is of complex type and is giving reference to its child elements which is in sequencial order.-->
+	<xs:element name="Car_Info">
+		<xs:complexType>
+			<xs:sequence>
+				<!--Referencing the elements present in the parent element.-->
+				<!--Here, the elements 'Engine, Battery_Capacity, Infotainment_System, Insurance, Camera' are optional elements, and are repeated more that once.-->
+				<xs:element ref="Manufacturer"/>
+				<xs:element ref="Model"/>
+				<xs:element ref="Chassis_No"/>
+				<xs:element ref="Engine" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Battery_Capacity" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Fuel_Type"/>
+				<xs:element ref="Infotainment_System" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Insurance" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Camera" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Color"/>
+				<xs:element ref="Weight"/>
+				<xs:element ref="Mfg_Year"/>
+				<xs:element ref="Used_For"/>
+			</xs:sequence>
+			<!--Here, 'Car_Info' element has 'Type' as an optional attribute and is of string type.-->
+			<xs:attribute name="Type" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<!--Creating schema for the child elements of 'Car_Info' element.-->
+	<xs:element name="Manufacturer" type="xs:string"/>
+	<xs:element name="Model" type="xs:string"/>
+	<xs:element name="Chassis_No" type="xs:string"/>
+	<xs:element name="Engine" type="xs:string"/>
+	<xs:element name="Battery_Capacity" type="xs:string"/>
+	<xs:element name="Fuel_Type">
+		<xs:simpleType>
+            <!--Adding restriction to 'Quantity' element.-->
+            <xs:restriction base="xs:string">
+            	<!--Defining a pattern for restriction using regex.-->
+                <xs:enumeration value="Gas"/>
+                <xs:enumeration value="Hybrid"/>
+                <xs:enumeration value="Electric"/>
+            </xs:restriction>
+        </xs:simpleType>
+	</xs:element>
+	<xs:element name="Infotainment_System" type="xs:string"/>
+	<xs:element name="Insurance" type="xs:string"/>
+	<xs:element name="Camera" type="xs:string"/>
+	<xs:element name="Color" type="xs:string"/>
+	<xs:element name="Weight">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="unit" type="xs:string"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Mfg_Year" type="xs:integer"/>
+	<xs:element name="Used_For">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<!--Here, 'Used_For' element has 'time' as an attribute and is of string type.-->
+					<xs:attribute name="time" type="xs:string"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!--Creating schema for the 'footer' element which is of complex type and is giving reference to its child elements which is in random order.-->
+	<xs:element name="footer">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Telephone_No"/>
+				<xs:element ref="Email"/>
+				<xs:element ref="FB"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<!--Creating schema for the child elements of 'footer' element.-->
+	<xs:element name="Telephone_No" type="xs:string"/>
+	<xs:element name="Email" type="xs:string"/>
+	<xs:element name="FB" type="xs:string"/>
+</xs:schema>
